@@ -1,0 +1,63 @@
+/* base: */
+
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+body {
+    background: #323232;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    transition: all 500ms;
+    background-position: center;
+ }
+  
+.card:hover {
+    /* Quando o mouse fica em cima o cartao diminui de tamanho */
+    transform: scale(0.9);
+    /* Dessa forma ele aumenta: */
+    /* transform: scale(1.1); */
+ }
+
+ .img{
+    height: 90%;
+    width: 90%;
+    border-radius: 20px;
+ }
+
+.txt{
+    font-size: 25px;
+    color: black;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+.cartao {
+    display: grid;
+
+    /* espaçamento dos cartões */
+    gap: 1rem;
+  
+    /* tamanho dos quadrados */
+    grid-auto-rows: 240px;
+  }
+  
+  /* Medium screens */
+  @media screen and (min-width: 600px) {
+    .cartao_alto {
+      grid-row: span 2 / auto;
+    }
+  
+    .cartao_gordo {
+      grid-column: span 2 / auto;
+    }
+  }

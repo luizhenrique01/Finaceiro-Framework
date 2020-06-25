@@ -1,0 +1,15 @@
+cor da logo:
+#6d2177
+
+cores principais/fundo:
+#7a6080
+#C59BCF
+#323232
+
+alertas e botões:
+#fdb834
+#f15a5a
+#34c3e0
+#229CBD
+#97cb59
+#78BD19

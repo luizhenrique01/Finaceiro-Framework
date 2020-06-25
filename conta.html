@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/cartao.css">
+    <script src="js/main.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Grid</title>
+
+  </head>
+  <body onload="info()">
+
+    <div class="topnav">
+      <a href="home.html" class="active">Home</a>
+      <!-- Navigation links (hidden by default) -->
+      <div id="Links">
+        <a href="#">Inicio</a>
+        <a href="conta.html">Sua conta</a>
+        <a href="contato.html">Contato</a>
+        <a href="index.html">Sair</a>
+      </div>
+      <!-- Hamburger menu || icon pega do font awesome || função para abrir e fechar -->
+      <a href="javascript:void(0);" class="icon" onclick="abrir()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    
+    <h1></h1>
+
+    <div class="cartao">
+        <div class="card cartao_gordo" style="background-color: #7a6080">
+        <img src="src/perfil.png" alt="Foto de perfil">
+        <p>Nome: <span id="nome"> a </span> </p>
+      </div>
+
+      <div
+        class="card cartao_alto"
+        style="background-color: #7a6080"
+      >
+        Dados pessoais
+      </div>
+
+      <div
+        class="card cartao_alto"
+        style="background-color: #7a6080"
+      >
+        Alterar
+      </div>
+
+      </div>
+      </body>
+      </html>

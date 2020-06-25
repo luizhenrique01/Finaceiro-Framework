@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/dash.css">
+   <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script src="js/index.js"></script>
+
+  <title>Controle Financeiro Pessoal</title>
+</head>
+<body style="background-color: #C59BCF;">
+ 
+
+    <div class="topnav">
+        <a href="#home" class="active">Home</a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="Links">
+          <a href="#">Inicio</a>
+          <a href="dashboard.html">dashboard</a>
+          <a href="contato.html">Contato</a>
+          <a href="index.html">Sair</a>
+        </div>
+        <!-- Hamburger menu || icon pega do font awesome || função para abrir e fechar -->
+        <a href="javascript:void(0);" class="icon" onclick="abrir()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+      <div class="centro">
+      <div class="espaco">
+             <div class="card">
+                <div class="active" align="center">
+                  <h1>Entrada</h1>
+                </div>
+                <div class="card-body card-totais">
+                  <h1 id="produtos">0</h1>
+                </div>
+             </div>
+        
+    
+
+    
+            <div class="card">
+              <div class="active" align="center">
+                <h1>Despesas</h1>
+              </div>
+              <div class="card-body card-totais">
+                <h1 id="totalusuarios">0</h1>
+              </div>
+           </div>
+           
+          
+
+
+         
+            <div class="card">
+              <div class="active" align="center">
+                <h1>Saldo</h1>
+              </div>
+              <div class="card-body card-totais">
+                <h1 id="totalusuarios">0</h1>
+              </div>
+           </div>
+         </div>
+        </div>
+
+        <h1 class="text-center">Despesas</h1>
+
+        <form class="form">
+            
+          <!-- <div class="form-group">
+              <label for="data">Data</label>
+              <input type="date" id="data" class="form-control" required autofocus/>        
+          </div>    
+           -->
+          <div class="form-group">
+              <!-- <label for="quantidade">ID</label> -->
+              <input hidden type="number" min="1" step="1" id="quantidade" class="form-control" value="1"/>
+          </div>
+          
+          <div class="form-group">
+              <label for="valor">Nome</label>
+              <input id="name" type="name" class="form-control"  required />
+          </div>
+          <div class="form-group">
+              <label for="valor">Valor</label>
+              <input id="desc" type="number" class="form-control"  required />
+          </div>
+          <div class="form-group">
+              <label for="valor">Tipo</label>
+              <input  id="tipo" type="text" class="form-control"  required />
+          </div>
+          <div class="form-group">
+              <label for="valor">Categoria</label>
+              <input  id="cat" type="text" class="form-control"  required />
+          </div>
+          
+          <input type="button" onclick="importar()" class="btn btn-primary"></input>
+      </form>
+
+        <!-- aqui vamo bota o bagui da fase 2 q é pra semana que vem -->
+
+       
+    
+    <!-- <div class="text-center">
+        <button class="btn btn-primary text-center" type="button">
+            Importar Negociações
+        </button>
+        <button class="btn btn-primary text-center" type="button">
+            Apagar
+        </button>
+    </div>  -->
+    
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOME</th>
+                <th>VALOR</th>
+                <th>TIPO</th>
+                <th>CATEGORIA</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+          <td id='tdid'></td>
+          <td id='tdnome'></td>
+          <td id='tdendereco'></td>
+          <td id='tdtelefone'></td>
+          <td id='tdemail'></td>
+        </tbody>
+        
+    </table>
+
+    <br>
+    <br>
+
+    <h1 class="text-center">Dinheiro recebido</h1>
+    
+    <form class="form">
+        
+        <!-- <div class="form-group">
+            <label for="data">Data</label>
+            <input type="date" id="data" class="form-control" required autofocus/>        
+        </div>    
+         -->
+        <div class="form-group">
+            <!-- <label for="quantidade">ID</label> -->
+            <input hidden type="number" min="1" step="1" id="quantidade" class="form-control" value="1"/>
+        </div>
+        
+        <div class="form-group">
+            <label for="valor">Nome</label>
+            <input id="name1" type="name" class="form-control"  required />
+        </div>
+        <div class="form-group">
+            <label for="valor">Valor</label>
+            <input id="desc1" type="number" class="form-control"  required />
+        </div>
+        <div class="form-group">
+            <label for="valor">Tipo</label>
+            <input  id="tipo1" type="text" class="form-control"  required />
+        </div>
+        <div class="form-group">
+            <label for="valor">Categoria</label>
+            <input  id="cat1" type="text" class="form-control"  required />
+        </div>
+        
+        <button onclick="recebido()" class="btn btn-primary">Incluir</button>
+    </form>
+
+  <!-- <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>NOME</th>
+                <th>DESCRIÇÃO</th>
+                <th>TIPO</th>
+                <th>CATEGORIA</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+        </tbody>
+        
+        <tfoot>
+        </tfoot>
+    </table> -->
+  
+
+ 
+    
+
+
+
+         
+    
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+</body>
+</html>

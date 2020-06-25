@@ -1,0 +1,105 @@
+/* config global */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #6d2177;
+}
+
+/* config geral do form */
+.box{
+    width: 600px;
+    padding: 40px;
+    position: absolute;
+    /* ajusta no meio y*/
+    top: 60%;
+    /* ajusta no meio y */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #323232;
+    text-align: center;
+    
+    border-radius: 20px;
+}
+
+/* config do h1 */
+.box h1{
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600px;
+}
+
+/* config os input */
+.box input[type = "text"], .box input[type = "password"], .box input[type="email"], .box input[type="number"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #000;
+    padding: 14px 10px;
+    color: white;
+    width: 300px;
+    outline: none;
+    border-radius: 25px;
+    transition: 0.25s;
+}
+
+::placeholder {
+    color: ivory;
+}
+
+
+/* Quando o input esta selecionado muda a cor */
+.box input[type = "text"]:focus,.box input[type = "password"]:focus, .box input[type="email"]:focus, 
+.box input[type="number"]:focus{
+    width: 380px;
+    border-color: #34c3e0;
+} 
+
+/* config do input btn */
+.box input[type = "submit"]{
+    border: 0;
+    width: 160px;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #97cb59;
+    padding: 14px 40px;
+    color: white;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+/* quando o mouse estiver em cima do botão o fundo muda */
+.box input[type = "submit"]:hover{
+    background: #97cb59;
+}
+
+.box input[name="Cadastrar"]{
+    border: 0;
+    width: 160px;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2d77a1;
+    padding: 14px 40px;
+    color: white;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box input[name="Cadastrar"]:hover{
+    background: #2d77a1;
+}
+
+.img{
+    width: 70%;
+    height: 250px;
+}

@@ -1,0 +1,42 @@
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+  
+  
+  .topnav a {
+      /* cor do hamburguer icon e do escrito na logo */
+    color: #fff;
+    /* tamanho do hamburguer */
+    padding: 14px 16px;
+    /* tira o sublinhado do link */
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+  }
+  
+  .topnav a.icon {
+      /* cor do quadrado do hamburguer */
+    background: #853EBD;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Muda a cor quando o mouse passa por cima */
+  .topnav a:hover {
+    background-color: #C59BCF;
+    color: #333;
+  }
+  
+  /* estilo da logo */
+  .active {
+    background-color: #6d2177;
+    color: white;
+  }
+
+  .contenair{
+    padding: 30px;
+  }

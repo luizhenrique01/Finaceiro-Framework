@@ -1,0 +1,15 @@
+.contenair{
+    padding: 30px;
+  }
+
+.espaco{
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}  
+
+.card{ 
+  width: 400px;
+  right: 0%;
+  left: 20%;
+}
